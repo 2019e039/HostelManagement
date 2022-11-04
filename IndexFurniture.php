@@ -53,6 +53,8 @@ $user_data = check_login($connection);
                     <th>nChair</th>
                     <th>nTable</th>
                     <th>RoomID</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

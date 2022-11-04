@@ -45,6 +45,7 @@ $user_data = check_login($connection);
                     <th>nBed</th>
                     <th>Capacity</th>
                     <th>nPeople</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

@@ -40,7 +40,7 @@ $user_data = check_login($connection);
                 <div class=" offset-sm-0 col-sm-2">
                     <a class="btn btn-head" href="./index.php" role="button">Home</a>
                 </div>
-                <div class="  offset-sm-0 col-sm-2">
+                <div class="col-sm-2">
                     <a class="btn btn-head" href="./AddEmployee.php" role="button">New Employee</a>
                 </div>
             </div>
@@ -71,13 +71,17 @@ $user_data = check_login($connection);
                         if (!$result) {
                             die("Invalid query: " . $connection->error);
                         }
-                        echo "<tr>
+                        echo "
+                        <thead>
+                        <tr>
                         <th>EmployeeID</th>
                         <th>Fname</th>
                         <th>Lname</th>
                         <th>MobileNo</th>
-                        <th>Salary</th> `
-                    </tr>";
+                        <th>Salary</th>
+                        <th></th>
+                        </tr>
+                        </thead>";
 
                         while ($row = $result->fetch_assoc()) {
                             echo "
@@ -105,6 +109,7 @@ $user_data = check_login($connection);
                         <th>Lname</th>
                         <th>MobileNo</th>
                         <th>Salary</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

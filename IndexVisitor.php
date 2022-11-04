@@ -46,6 +46,7 @@ $user_data = check_login($connection);
                     <th>TimeOut</th>
                     <th>Date</th>
                     <th>Sex</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

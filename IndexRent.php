@@ -100,6 +100,7 @@ $user_data = check_login($connection);
                         <th>Amount</th>
                         <th>Date</th>
                         <th>Medium</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
