@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	<style>
 		Body {
 			font-family: Calibri, Helvetica, sans-serif;
-			background: url(bgImage.jpg)no-repeat center center fixed;
+			background: url(BackGroundOnly.jpg)no-repeat center center fixed;
 			background-size: cover;
 			width: 400px;
 		}

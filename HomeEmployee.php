@@ -22,7 +22,7 @@ $user_data = check_login($connection);
         body {
             margin: 0;
             padding: 0;
-            background: url(backImg.jpg)no-repeat center center fixed;
+            background: url(BackGroundImage.jpg)no-repeat center center fixed;
             font-family: sans-serif;
             background-size: cover;
         }

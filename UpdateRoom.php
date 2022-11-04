@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     body {
         margin: 0;
         padding: 0;
-        background: url(bgImage.jpg)no-repeat center center fixed;
+        background: url(BackGroundOnly.jpg)no-repeat center center fixed;
         font-family: sans-serif;
         background-size: cover;
     }
