@@ -54,7 +54,6 @@ $user_data = check_login($connection);
                     <th>nTable</th>
                     <th>RoomID</th>
                     <th></th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>

@@ -34,13 +34,11 @@ $user_data = check_login($connection);
     <div class="container my-5">
         <h2>List of Payments</h2>
         <form action="" method="GET">
-            <div class="row mb-2">
+            <div class="row mb-0">
                 <div class=" offset-sm-0 col-sm-2">
                     <a class="btn btn-head" href="./HomeEmployee.php" role="button">Home</a>
                 </div>
-            </div>
-            <div class="row mb-3">
-                <div class=" offset-sm-0 col-sm-2 d-grid">
+                <div class=" offset-sm-1 col-sm-1 d-grid">
                     <button type="submit" class="btn btn-head">Search</button>
                 </div>
                 <div class=" offset-sm-0 col-sm-2">
@@ -67,27 +65,31 @@ $user_data = check_login($connection);
                         if (!$result) {
                             die("Invalid query: " . $connection->error);
                         }
-                        echo "<tr>
+                        echo "
+                        <thead>
+                        <tr>
                         <th>PayID</th>
                         <th>StudentID</th>
                         <th>Amount</th>
                         <th>Date</th>
                         <th>Medium</th>`
-                    </tr>";
+                        <th></th>
+                        </tr>
+                        </thead>";
 
                         while ($row = $result->fetch_assoc()) {
                             echo "
-                    <tr>
-                    <td>$row[PayID]</td>
-                    <td>$row[StudentID]</td>
-                    <td>$row[Amount]</td>
-                    <td>$row[Date]</td>
-                    <td>$row[Medium]</td>
-                    <td>
-                    <a class='btn btn-head btn-sm' href='./UpdateRent.php?PayID=$row[PayID]'>Update</a>
-                    </td>
-                    </tr>
-                    ";
+                                <tr>
+                                <td>$row[PayID]</td>
+                                <td>$row[StudentID]</td>
+                                <td>$row[Amount]</td>
+                                <td>$row[Date]</td>
+                                <td>$row[Medium]</td>
+                                <td>
+                                <a class='btn btn-head btn-sm' href='./UpdateRent.php?PayID=$row[PayID]'>Update</a>
+                                </td>
+                                </tr>
+                                ";
                         }
                     }
                     ?>
