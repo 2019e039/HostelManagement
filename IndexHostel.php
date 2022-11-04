@@ -27,14 +27,37 @@ $user_data = check_login($connection);
         font-family: sans-serif;
         background-size: cover;
     }
-</style>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: url(BackGroundOnly.jpg)no-repeat center center fixed;
+
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
         font-family: sans-serif;
-        background-size: cover;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 25px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
     }
 </style>
 
@@ -45,7 +68,7 @@ $user_data = check_login($connection);
         <a class="btn btn-head" href="/HostelManagement/AddHostel.php" role="button">New Hostel</a>
 
         <br>
-        <table class="table">
+        <table class="styled-table">
             <thead>
                 <tr>
                     <th>HostelID</th>
@@ -53,6 +76,7 @@ $user_data = check_login($connection);
                     <th>nRooms</th>
                     <th>nFloors</th>
                     <th>nStudents</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
