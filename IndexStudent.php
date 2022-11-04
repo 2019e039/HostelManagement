@@ -18,6 +18,7 @@ $user_data = check_login($connection);
     <title>Hostel Management</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="EditDeleteButton.css">
+    <link rel="stylesheet" type="text/css" href="table.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <style>
@@ -51,7 +52,7 @@ $user_data = check_login($connection);
             </div>
         </form>
         <form>
-            <table class="table">
+            <table class="styled-table">
                 <thead>
                 </thead>
                 <tbody>

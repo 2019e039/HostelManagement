@@ -8,6 +8,7 @@
 	<title>Hostel Management</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="EditDeleteButton.css">
+	<link rel="stylesheet" type="text/css" href="table.css">
 	<style>
 		body {
 			margin: 0;

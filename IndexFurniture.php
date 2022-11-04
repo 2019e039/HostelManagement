@@ -19,6 +19,7 @@ $user_data = check_login($connection);
     <title>Hostel Management</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="EditDeleteButton.css">
+    <link rel="stylesheet" type="text/css" href="table.css">
 </head>
 <style>
     body {
@@ -45,7 +46,7 @@ $user_data = check_login($connection);
         <a class="btn btn-head" href="/HostelManagement/HomeEmployee.php" role="button">Home</a>
         <a class="btn btn-head" href="/HostelManagement/AddFurniture.php" role="button">New furniture</a>
         <br>
-        <table class="table">
+        <table class="styled-table">
             <thead>
                 <tr>
                     <th>FurnitureID</th>
