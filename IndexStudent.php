@@ -67,7 +67,9 @@ $user_data = check_login($connection);
                         if (!$result) {
                             die("Invalid query: " . $connection->error);
                         }
-                        echo "<tr>
+                        echo "
+                        <thead>
+                        <tr>
                         <th>StudentID</th>
                         <th>RoomID</th>
                         <th>Fname</th>
@@ -77,8 +79,11 @@ $user_data = check_login($connection);
                         <th>Department</th>
                         <th>Status</th>
                         <th>Address</th>
-                        <th>HostelID</th> `
-                    </tr>";
+                        <th>HostelID</th> 
+                        <th></th>`
+                        <th></th>
+                        </thead>
+                        </tr>";
 
                         while ($row = $result->fetch_assoc()) {
                             echo "
@@ -95,6 +100,8 @@ $user_data = check_login($connection);
                     <td>$row[HostelID]</td>
                     <td>
                         <a class='btn btn-head btn-sm' href='./UpdateStudent.php?StudentID=$row[StudentID]'>Update</a>
+                    </td>
+                    <td>
                         <a class='btn btn-delete btn-sm' href='./DeleteStudent.php?StudentID=$row[StudentID]'>Delete</a>
                     </td>
                     </tr>
@@ -116,6 +123,7 @@ $user_data = check_login($connection);
                         <th>Status</th>
                         <th>Address</th>
                         <th>HostelID</th> `
+                        <th></th>
                         <th></th>
                     </tr>
                 </thead>
@@ -152,6 +160,8 @@ $user_data = check_login($connection);
                     <td>$row[HostelID]</td>
                     <td>
                         <a class='btn btn-update btn-sm' href='/HostelManagement/UpdateStudent.php?StudentID=$row[StudentID]'>Update</a>
+                    </td>
+                    <td>
                         <a class='btn btn-delete btn-sm' href='/HostelManagement/DeleteStudent.php?StudentID=$row[StudentID]'>Delete</a>
                     </td>
                     </tr>
