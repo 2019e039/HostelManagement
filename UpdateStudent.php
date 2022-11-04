@@ -194,8 +194,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     <input type="text" class="form-control" name="Address" value="<?php echo $Address; ?>">
                 </div>
             </div>
-            <div class="col-mb-3">
-                <label class="col-sm-3 col-form-label">Hostel ID</label>
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Address</label>
                 <div class="col-sm-6">
                     <div class="box">
                         <select name="HostelID">
