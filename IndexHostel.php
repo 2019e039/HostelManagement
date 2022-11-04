@@ -18,6 +18,7 @@ $user_data = check_login($connection);
     <title>Hostel Management</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="EditDeleteButton.css">
+    <link rel="stylesheet" type="text/css" href="table.css">
 </head>
 <style>
     body {
@@ -26,38 +27,6 @@ $user_data = check_login($connection);
         background: url(BackGroundOnly.jpg)no-repeat center center fixed;
         font-family: sans-serif;
         background-size: cover;
-    }
-
-    .styled-table {
-        border-collapse: collapse;
-        margin: 25px 0;
-        font-size: 0.9em;
-        font-family: sans-serif;
-        min-width: 400px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .styled-table thead tr {
-        background-color: #009879;
-        color: #ffffff;
-        text-align: left;
-    }
-
-    .styled-table th,
-    .styled-table td {
-        padding: 12px 25px;
-    }
-
-    .styled-table tbody tr {
-        border-bottom: 1px solid #dddddd;
-    }
-
-    .styled-table tbody tr:nth-of-type(even) {
-        background-color: #f3f3f3;
-    }
-
-    .styled-table tbody tr:last-of-type {
-        border-bottom: 2px solid #009879;
     }
 </style>
 
