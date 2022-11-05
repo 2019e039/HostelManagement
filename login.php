@@ -57,15 +57,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		button {
 			background-color: #4CAF50;
 			width: 100%;
-			color: orange;
+			color: black;
 			padding: 15px;
 			margin: 10px 0px;
 			border: none;
 			cursor: pointer;
+			border-radius: 10px;
 		}
 
 		form {
-			border: 3px solid #f1f1f1;
+			border: 3px solid #008000;
+			border-radius: 10px;
 		}
 
 		input[type=text],
@@ -76,6 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			display: inline-block;
 			border: 2px solid green;
 			box-sizing: border-box;
+			border-radius: 10px;
 		}
 
 		button:hover {
@@ -91,6 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		.container {
 			padding: 30px;
 			background-color: lightblue;
+			border-radius: 20px;
 		}
 	</style>
 </head>
@@ -106,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			<label>Password : </label>
 			<input type="password" placeholder="Enter Password" name="password" required>
 			<button type="submit">Login</button>
-			<a href="signup.php" style="color: #fff">Doesn't have an account?</a>
+			<a href="signup.php" style="color: black">Doesn't have an account?</a>
 		</div>
 	</form>
 </body>
