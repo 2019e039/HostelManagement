@@ -10,7 +10,6 @@ $StudentID = "";
 $Fname  = "";
 $Lname = "";
 $Age = "";
-$HostelID = "";
 $RoomID = "";
 $Address = "";
 $MobileNo = "";
@@ -25,7 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $Fname  = $_POST["Fname"];
     $Lname = $_POST["Lname"];
     $Age = $_POST["Age"];
-    $HostelID = $_POST["HostelID"];
     $RoomID = $_POST["RoomID"];
     $Address = $_POST["Address"];
     $MobileNo = $_POST["MobileNo"];
@@ -33,13 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $Status = "Yes";
 
     do {
-        if (empty($StudentID) || empty($Fname) || empty($Lname) || empty($Age) || empty($HostelID) || empty($RoomID) || empty($Address) || empty($MobileNo) || empty($Department)) {
+        if (empty($StudentID) || empty($Fname) || empty($Lname) || empty($Age) || empty($RoomID) || empty($Address) || empty($MobileNo) || empty($Department)) {
             $errorMessage = "All the fields are required";
             break;
         }
 
         $SELECT = "SELECT StudentID From student Where StudentID = ? Limit 1";
-        $INSERT = "INSERT Into student (StudentID,RoomID,Fname,Lname,Age,MobileNo,Department,Status,Address,HostelID)values(?,?,?,?,?,?,?,?,?,?)";
+        $INSERT = "INSERT Into student (StudentID,RoomID,Fname,Lname,Age,MobileNo,Department,Status,Address)values(?,?,?,?,?,?,?,?,?)";
 
         $stmt = $connection->prepare($SELECT);
         $stmt->bind_param("s", $StudentID);
@@ -55,10 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($rnum == 0 && $row["nPeople"] < 4) {
             $stmt->close();
             $stmt = $connection->prepare($INSERT);
-            $stmt->bind_param("ssssisssss", $StudentID, $RoomID, $Fname, $Lname, $Age, $MobileNo, $Department, $Status, $Address, $HostelID);
+            $stmt->bind_param("ssssissss", $StudentID, $RoomID, $Fname, $Lname, $Age, $MobileNo, $Department, $Status, $Address);
             $stmt->execute();
             $successMessage = "Student added successfully";
-            $sql = "UPDATE room " . "SET nPeople=nPeople+1  WHERE RoomID='$_POST[RoomID]' and HostelID='$_POST[HostelID]'";
+            $sql = "UPDATE room " . "SET nPeople=nPeople+1  WHERE RoomID='$_POST[RoomID]'";
             $result = $connection->query($sql);
         } else if ($row["nPeople"] > 3) {
             $errorMessage = "Room already full";
@@ -73,7 +71,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $Fname  = "";
         $Lname = "";
         $Age = "";
-        $HostelID = "";
         $RoomID = "";
         $Address = "";
         $MobileNo = "";
@@ -171,12 +168,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label class="col-sm-3 col-form-label">Address</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="Address" value="<?php echo $Address; ?>">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Hostel ID</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="HostelID" value="<?php echo $HostelID; ?>">
                 </div>
             </div>
 

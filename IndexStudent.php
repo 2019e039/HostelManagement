@@ -61,7 +61,7 @@ $user_data = check_login($connection);
 
                         $ID = $_GET['StudentID'];
 
-                        $sql = "SELECT * FROM student WHERE StudentID='$ID' OR RoomID='$ID' OR Fname='$ID' OR Lname='$ID' OR HostelID='$ID'";
+                        $sql = "SELECT * FROM student WHERE StudentID='$ID' OR RoomID='$ID' OR Fname='$ID' OR Lname='$ID'";
                         $result = $connection->query($sql);
 
                         if (!$result) {
@@ -79,7 +79,6 @@ $user_data = check_login($connection);
                         <th>Department</th>
                         <th>Status</th>
                         <th>Address</th>
-                        <th>HostelID</th> 
                         <th></th>`
                         <th></th>
                         </thead>
@@ -97,7 +96,6 @@ $user_data = check_login($connection);
                     <td>$row[Department]</td>
                     <td>$row[Status]</td>
                     <td>$row[Address]</td>
-                    <td>$row[HostelID]</td>
                     <td>
                         <a class='btn btn-head btn-sm' href='./UpdateStudent.php?StudentID=$row[StudentID]'>Update</a>
                     </td>
@@ -122,7 +120,6 @@ $user_data = check_login($connection);
                         <th>Department</th>
                         <th>Status</th>
                         <th>Address</th>
-                        <th>HostelID</th> `
                         <th></th>
                         <th></th>
                     </tr>
@@ -157,12 +154,11 @@ $user_data = check_login($connection);
                     <td>$row[Department]</td>
                     <td>$row[Status]</td>
                     <td>$row[Address]</td>
-                    <td>$row[HostelID]</td>
                     <td>
-                        <a class='btn btn-update btn-sm' href='/HostelManagement/UpdateStudent.php?StudentID=$row[StudentID]'>Update</a>
+                        <a class='btn btn-update btn-sm' href='./UpdateStudent.php?StudentID=$row[StudentID]'>Update</a>
                     </td>
                     <td>
-                        <a class='btn btn-delete btn-sm' href='/HostelManagement/DeleteStudent.php?StudentID=$row[StudentID]'>Delete</a>
+                        <a class='btn btn-delete btn-sm' href='./DeleteStudent.php?StudentID=$row[StudentID]'>Delete</a>
                     </td>
                     </tr>
                     ";

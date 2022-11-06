@@ -9,7 +9,6 @@ $StudentID = "";
 $Fname  = "";
 $Lname = "";
 $Age = "";
-$HostelID = "";
 $RoomID = "";
 $Address = "";
 $MobileNo = "";
@@ -41,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $Fname  = $row["Fname"];
     $Lname = $row["Lname"];
     $Age = $row["Age"];
-    $HostelID = $row["HostelID"];
     $RoomID = $row["RoomID"];
     $Address = $row["Address"];
     $MobileNo = $row["MobileNo"];
@@ -53,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $Fname  = $_POST["Fname"];
     $Lname = $_POST["Lname"];
     $Age = $_POST["Age"];
-    $HostelID = $_POST["HostelID"];
     $RoomID = $_POST["RoomID"];
     $Address = $_POST["Address"];
     $MobileNo = $_POST["MobileNo"];
@@ -62,13 +59,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
     do {
-        if (empty($StudentID) || empty($Fname) || empty($Lname) || empty($Age) || empty($HostelID) || empty($RoomID) || empty($Address) || empty($MobileNo) || empty($Department) || empty($Status)) {
+        if (empty($StudentID) || empty($Fname) || empty($Lname) || empty($Age) || empty($RoomID) || empty($Address) || empty($MobileNo) || empty($Department) || empty($Status)) {
             $errorMessage = "All the fields are required";
             break;
         }
 
         $sql = "UPDATE student " . "SET RoomID='$_POST[RoomID]',Fname='$_POST[Fname]',Lname='$_POST[Lname]',Age='$_POST[Age]',MobileNo='$_POST[MobileNo]',Department='$_POST[Department]',Status='$_POST[Status]',
-                Address='$_POST[Address]',HostelID='$_POST[HostelID]' WHERE Studentid='$_POST[StudentID]'";
+                Address='$_POST[Address]' WHERE Studentid='$_POST[StudentID]'";
 
         $result = $connection->query($sql);
 
@@ -194,21 +191,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <label class="col-sm-3 col-form-label">Address</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="Address" value="<?php echo $Address; ?>">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Address</label>
-                <div class="col-sm-6">
-                    <div class="box">
-                        <select name="HostelID">
-                            <option value="" . disabled selected><?php echo $HostelID; ?></option>
-                            <option value="H001">H001</option>
-                            <option value="H002">H002</option>
-                            <option value="H003">H003</option>
-                            <option value="H004">H004</option>
-                            <option value="H005">H005</option>
-                        </select>
-                    </div>
                 </div>
             </div>
 
