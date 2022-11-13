@@ -75,8 +75,8 @@ $user_data = check_login($connection);
                     <td>$row[Capacity]</td>
                     <td>$row[nPeople]</td>
                     <td>
-                        <a class='btn btn-head btn-sm' href='/HostelManagement/UpdateRoom.php?RoomID=$row[RoomID]'>Update</a>
-                        <a class='btn btn-delete btn-sm' href='/HostelManagement/DeleteRoom.php?RoomID=$row[RoomID]'>Delete</a>
+                        <a class='btn btn-head btn-sm' href='/HostelManagement/UpdateRoom.php?RoomID=$row[RoomID]'><ion-icon name='create-sharp'></ion-icon>Update</a>
+                        <a class='btn btn-delete btn-sm' href='/HostelManagement/DeleteRoom.php?RoomID=$row[RoomID]'><ion-icon name='trash-sharp'></ion-icon>Delete</a>
                     </td>
                     </tr>
                     ";
@@ -86,6 +86,8 @@ $user_data = check_login($connection);
             </tbody>
         </table>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

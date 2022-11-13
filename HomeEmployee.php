@@ -43,18 +43,29 @@ $user_data = check_login($connection);
         <header class="w3-panel w3-center" style="padding:128px 16px">
             <h1>EMPLOYEE</h1>
             <div class="w3-padding-32">
-                <div class="w3-bar w3-border">
-                    <a class="btn btn-head" href="/HostelManagement/index.php" role="button">Home</a>
-                    <a class="btn btn-head" href="/HostelManagement/IndexEmployee.php" role="button">Employee Details</a>
-                    <a class="btn btn-head" href="/HostelManagement/IndexStudent.php" role="button">Student</a>
-                    <a class="btn btn-head" href="/HostelManagement/IndexFurniture.php" role="button">Furniture</a>
-                    <a class="btn btn-head" href="/HostelManagement/IndexHostel.php" role="button">Hostel</a>
-                    <a class="btn btn-head" href="/HostelManagement/IndexRoom.php" role="button">Room</a>
-                    <a class="btn btn-head" href="/HostelManagement/IndexRent.php" role="button">Payment History</a>
-                    <a class="btn btn-head" href="/HostelManagement/IndexVisitor.php" role="button">Visitor</a>
+                <div class="w3-bar">
+                    <a class="btn btn-head" href="./index.php" role="button">
+                        <ion-icon name="home-sharp"></ion-icon>
+                    </a>
+                    <a class="btn btn-head" href="./IndexEmployee.php" role="button">
+                        <ion-icon name="person"></ion-icon>Employee Details
+                    </a>
+                    <a class="btn btn-head" href="./IndexStudent.php" role="button">
+                        <ion-icon name="person"></ion-icon>Student
+                    </a>
+                    <a class="btn btn-head" href="./IndexFurniture.php" role="button">Furniture</a>
+                    <a class="btn btn-head" href="./IndexHostel.php" role="button">Hostel</a>
+                    <a class="btn btn-head" href="./IndexRoom.php" role="button">Room</a>
+                    <a class="btn btn-head" href="./IndexRent.php" role="button">
+                        <ion-icon name="logo-paypal"></ion-icon>Payment History
+                    </a>
+                    <a class="btn btn-head" href="./IndexVisitor.php" role="button">Visitor</a>
                 </div>
             </div>
         </header>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

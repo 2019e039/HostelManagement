@@ -55,10 +55,18 @@ $user_data = check_login($connection);
         <h2>Student</h2>
     </div>
     <div1>
-        <a class="btn btn-head" href="/HostelManagement/index.php" role="button">Home</a>
-        <a class="btn btn-head" href="/HostelManagement/AddStudent.php" role="button">Register</a>
-        <a class="btn btn-head" href="/HostelManagement/AddRent.php" role="button">Pay</a>
+        <a class="btn btn-head" href="./index.php" role="button">
+            <ion-icon name="home-sharp">
+        </a>
+        <a class="btn btn-head" href="./AddStudent.php" role="button">
+            <ion-icon name="person-add"></ion-icon>Register
+        </a>
+        <a class="btn btn-head" href="./AddRent.php" role="button">
+            <ion-icon name="logo-paypal"></ion-icon>Pay
+        </a>
     </div1>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

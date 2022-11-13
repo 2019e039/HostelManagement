@@ -38,15 +38,21 @@ $user_data = check_login($connection);
         <form action="" method="GET">
             <div class="row mb-2">
                 <div class=" offset-sm-0 col-sm-2">
-                    <a class="btn btn-head" href="./index.php" role="button">Home</a>
+                    <a class="btn btn-head" href="./index.php" role="button">
+                        <ion-icon name="home-sharp"></ion-icon>
+                    </a>
                 </div>
                 <div class="col-sm-2">
-                    <a class="btn btn-head" href="./AddEmployee.php" role="button">New Employee</a>
+                    <a class="btn btn-head" href="./AddEmployee.php" role="button">
+                        <ion-icon name="add"></ion-icon>New Employee
+                    </a>
                 </div>
             </div>
             <div class="row mb-3">
                 <div class=" offset-sm-0 col-sm-2 d-grid">
-                    <button type="submit" class="btn btn-head">Search</button>
+                    <button type="submit" class="btn btn-head">
+                        <ion-icon name="search"></ion-icon>Search
+                    </button>
                 </div>
                 <div class=" offset-sm-0 col-sm-2">
                     <input type="text" class="form-control" name="ID" value="<?php if (isset($_GET['ID'])) {
@@ -92,8 +98,8 @@ $user_data = check_login($connection);
                     <td>$row[MobileNo]</td>
                     <td>$row[Salary]</td>
                     <td>
-                    <a class='btn btn-head btn-sm' href='./UpdateEmployee.php?EmployeeID=$row[EmployeeID]'>Update</a>
-                    <a class='btn btn-delete btn-sm' href='./DeleteEmployee.php?EmployeeID=$row[EmployeeID]'>Delete</a>
+                    <a class='btn btn-head btn-sm' href='./UpdateEmployee.php?EmployeeID=$row[EmployeeID]'><ion-icon name='create-sharp'></ion-icon>Update</a>
+                    <a class='btn btn-delete btn-sm' href='./DeleteEmployee.php?EmployeeID=$row[EmployeeID]'><ion-icon name='trash-sharp'></ion-icon>Delete</a>
                     </td>
                     </tr>
                     ";
@@ -139,8 +145,8 @@ $user_data = check_login($connection);
                     <td>$row[MobileNo]</td>
                     <td>$row[Salary]</td>
                     <td>
-                        <a class='btn btn-head btn-sm' href='./UpdateEmployee.php?EmployeeID=$row[EmployeeID]'>Update</a>
-                        <a class='btn btn-delete btn-sm' href='./DeleteEmployee.php?EmployeeID=$row[EmployeeID]'>Delete</a>
+                        <a class='btn btn-head btn-sm' href='./UpdateEmployee.php?EmployeeID=$row[EmployeeID]'><ion-icon name='create-sharp'></ion-icon>Update</a>
+                        <a class='btn btn-delete btn-sm' href='./DeleteEmployee.php?EmployeeID=$row[EmployeeID]'><ion-icon name='trash-sharp'></ion-icon>Delete</a>
                     </td>
                     </tr>
                     ";
@@ -150,6 +156,8 @@ $user_data = check_login($connection);
                 </tbody>
             </table>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

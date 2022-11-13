@@ -34,14 +34,25 @@
 			<h1 class="w3-xlarge">HOSTEL</h1>
 			<h1>Management System</h1>
 			<div class="w3-padding-32">
-				<div class="w3-bar w3-border">
-					<a class="btn btn-head" href="./login.php" role="button">Sign in</a>
-					<a class="btn btn-head" href="./HomeStudent.php" role="button">Student</a>
-					<a class="btn btn-head" href="./HomeEmployee.php" role="button">Employee</a>
-					<a class="btn btn-head" href="./logout.php" role="button">Sign out</a>
+				<div class="w3-bar">
+					<a class="btn btn-head" href="./login.php" role="button">
+						<ion-icon name="log-in-sharp"></ion-icon>Sign in
+					</a>
+					<a class="btn btn-head" href="./HomeStudent.php" role="button">
+						<ion-icon name="person-sharp"></ion-icon>Student
+					</a>
+					<a class="btn btn-head" href="./HomeEmployee.php" role="button">
+						<ion-icon name="person-sharp"></ion-icon>Employee
+					</a>
+					<a class="btn btn-head" href="./logout.php" role="button">
+						<ion-icon name="log-out-sharp"></ion-icon>Sign out
+					</a>
 				</div>
 			</div>
 		</header>
+	</div>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

@@ -43,8 +43,8 @@ $user_data = check_login($connection);
 <body>
     <div class="container my-5">
         <h2>List of Furnitures</h2>
-        <a class="btn btn-head" href="/HostelManagement/HomeEmployee.php" role="button">Home</a>
-        <a class="btn btn-head" href="/HostelManagement/AddFurniture.php" role="button">New furniture</a>
+        <a class="btn btn-head" href="./HomeEmployee.php" role="button">Home</a>
+        <a class="btn btn-head" href="./AddFurniture.php" role="button">New furniture</a>
         <br>
         <table class="styled-table">
             <thead>
@@ -82,8 +82,8 @@ $user_data = check_login($connection);
                     <td>$row[nTable]</td>
                     <td>$row[RoomID]</td>
                     <td>
-                        <a class='btn btn-head btn-sm' href='/HostelManagement/UpdateFurniture.php?FurnitureID=$row[FurnitureID]'>Update</a>
-                        <a class='btn btn-delete btn-sm' href='/HostelManagement/DeleteFurniture.php?FurnitureID=$row[FurnitureID]'>Delete</a>
+                        <a class='btn btn-head btn-sm' href='/HostelManagement/UpdateFurniture.php?FurnitureID=$row[FurnitureID]'><ion-icon name='create-sharp'></ion-icon>Update</a>
+                        <a class='btn btn-delete btn-sm' href='/HostelManagement/DeleteFurniture.php?FurnitureID=$row[FurnitureID]'><ion-icon name='trash-sharp'></ion-icon>Delete</a>
                     </td>
                     </tr>
                     ";
@@ -93,6 +93,8 @@ $user_data = check_login($connection);
             </tbody>
         </table>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

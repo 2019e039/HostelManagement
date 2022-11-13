@@ -97,10 +97,10 @@ $user_data = check_login($connection);
                     <td>$row[Status]</td>
                     <td>$row[Address]</td>
                     <td>
-                        <a class='btn btn-head btn-sm' href='./UpdateStudent.php?StudentID=$row[StudentID]'>Update</a>
+                        <a class='btn btn-head btn-sm' href='./UpdateStudent.php?StudentID=$row[StudentID]'><ion-icon name='create-sharp'></ion-icon>Update</a>
                     </td>
                     <td>
-                        <a class='btn btn-delete btn-sm' href='./DeleteStudent.php?StudentID=$row[StudentID]'>Delete</a>
+                        <a class='btn btn-delete btn-sm' href='./DeleteStudent.php?StudentID=$row[StudentID]'><ion-icon name='trash-sharp'></ion-icon>Delete</a>
                     </td>
                     </tr>
                     ";
@@ -155,10 +155,10 @@ $user_data = check_login($connection);
                     <td>$row[Status]</td>
                     <td>$row[Address]</td>
                     <td>
-                        <a class='btn btn-update btn-sm' href='./UpdateStudent.php?StudentID=$row[StudentID]'>Update</a>
+                        <a class='btn btn-update btn-sm' href='./UpdateStudent.php?StudentID=$row[StudentID]'><ion-icon name='create-sharp'></ion-icon>Update</a>
                     </td>
                     <td>
-                        <a class='btn btn-delete btn-sm' href='./DeleteStudent.php?StudentID=$row[StudentID]'>Delete</a>
+                        <a class='btn btn-delete btn-sm' href='./DeleteStudent.php?StudentID=$row[StudentID]'><ion-icon name='trash-sharp'></ion-icon>Delete</a>
                     </td>
                     </tr>
                     ";
@@ -170,6 +170,8 @@ $user_data = check_login($connection);
         </form>
         <br>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

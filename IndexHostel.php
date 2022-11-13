@@ -33,8 +33,8 @@ $user_data = check_login($connection);
 <body>
     <div class="container my-5">
         <h2>List of Hostels</h2>
-        <a class="btn btn-head" href="/HostelManagement/HomeEmployee.php" role="button">Home</a>
-        <a class="btn btn-head" href="/HostelManagement/AddHostel.php" role="button">New Hostel</a>
+        <a class="btn btn-head" href="./HomeEmployee.php" role="button">Home</a>
+        <a class="btn btn-head" href="./AddHostel.php" role="button">New Hostel</a>
 
         <br>
         <table class="styled-table">
@@ -75,8 +75,8 @@ $user_data = check_login($connection);
                     <td>$row[nFloors]</td>
                     <td>$row[nStudents]</td>
                     <td>
-                        <a class='btn btn-head btn-sm' href='/HostelManagement/UpdateHostel.php?HostelID=$row[HostelID]'>Update</a>
-                        <a class='btn btn-delete btn-sm' href='/HostelManagement/DeleteHostel.php?HostelID=$row[HostelID]'>Delete</a>
+                        <a class='btn btn-head btn-sm' href='/HostelManagement/UpdateHostel.php?HostelID=$row[HostelID]'><ion-icon name='create-sharp'></ion-icon>Update</a>
+                        <a class='btn btn-delete btn-sm' href='/HostelManagement/DeleteHostel.php?HostelID=$row[HostelID]'><ion-icon name='trash-sharp'></ion-icon>Delete</a>
                     </td>
                     </tr>
                     ";
@@ -86,6 +86,8 @@ $user_data = check_login($connection);
             </tbody>
         </table>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

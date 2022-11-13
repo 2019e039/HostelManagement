@@ -86,7 +86,7 @@ $user_data = check_login($connection);
                                 <td>$row[Date]</td>
                                 <td>$row[Medium]</td>
                                 <td>
-                                <a class='btn btn-head btn-sm' href='./UpdateRent.php?PayID=$row[PayID]'>Update</a>
+                                <a class='btn btn-head btn-sm' href='./UpdateRent.php?PayID=$row[PayID]'><ion-icon name='create-sharp'></ion-icon>Update</a>
                                 </td>
                                 </tr>
                                 ";
@@ -132,7 +132,7 @@ $user_data = check_login($connection);
                     <td>$row[Date]</td>
                     <td>$row[Medium]</td>
                     <td>
-                        <a class='btn btn-head btn-sm' href='./UpdateRent.php?PayID=$row[PayID]'>Update</a>
+                        <a class='btn btn-head btn-sm' href='./UpdateRent.php?PayID=$row[PayID]'><ion-icon name='create-sharp'></ion-icon>Update</a>
                     </td>
                     </tr>
                     ";
@@ -142,6 +142,8 @@ $user_data = check_login($connection);
                 </tbody>
             </table>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
