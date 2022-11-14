@@ -29,11 +29,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			}
 		}
 
-		$alert = "<script>alert('wrong username or password!')</script>";
-		echo $alert;
+		$errorMessage = "wrong username or password!";
+		echo "
+            <div class='alert alert-warning alert-dismissible fade show' role='alert' >
+				<center>
+				<strong>$errorMessage</strong>
+				</center>
+            </div>
+            ";
 	} else {
-		$alert = "<script>alert('wrong username or password!')</script>";
-		echo $alert;
+		$errorMessage = "wrong username or password!";
+		echo "
+            <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+				<center>
+                <strong>$errorMessage</strong>
+				</center>
+            </div>
+            ";
 	}
 }
 
