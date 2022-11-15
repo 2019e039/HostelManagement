@@ -29,28 +29,30 @@
 </head>
 
 <body>
-	<div class="w3-content" style="max-width:1500px">
-		<header class="w3-panel w3-center" style="padding:128px 16px">
-			<h1 class="w3-xlarge">HOSTEL</h1>
-			<h1>Management System</h1>
-			<div class="w3-padding-32">
-				<div class="w3-bar">
-					<a class="btn btn-head" href="./login.php" role="button">
-						<ion-icon name="log-in-sharp"></ion-icon>Sign in
-					</a>
-					<a class="btn btn-head" href="./HomeStudent.php" role="button">
-						<ion-icon name="person-sharp"></ion-icon>Student
-					</a>
-					<a class="btn btn-head" href="./HomeEmployee.php" role="button">
-						<ion-icon name="person-sharp"></ion-icon>Employee
-					</a>
-					<a class="btn btn-head" href="./logout.php" role="button">
-						<ion-icon name="log-out-sharp"></ion-icon>Sign out
-					</a>
+	<center>
+		<div class="w3-content" style="max-width:1500px">
+			<header class="w3-panel w3-center" style="padding:128px 16px">
+				<h1 class="w3-xlarge">HOSTEL</h1>
+				<h1>Management System</h1>
+				<div class="w3-padding-32">
+					<div class="w3-bar">
+						<a class="btn btn-head" href="./login.php" role="button">
+							<ion-icon name="log-in-sharp"></ion-icon>Sign in
+						</a>
+						<a class="btn btn-head" href="./HomeStudent.php" role="button">
+							<ion-icon name="person-sharp"></ion-icon>Student
+						</a>
+						<a class="btn btn-head" href="./HomeEmployee.php" role="button">
+							<ion-icon name="person-sharp"></ion-icon>Employee
+						</a>
+						<a class="btn btn-head" href="./logout.php" role="button">
+							<ion-icon name="log-out-sharp"></ion-icon>Sign out
+						</a>
+					</div>
 				</div>
-			</div>
-		</header>
-	</div>
+			</header>
+		</div>
+	</center>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
