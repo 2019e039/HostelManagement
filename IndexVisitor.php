@@ -32,7 +32,7 @@ $user_data = check_login($connection);
 
 <body>
     <div class="container my-5">
-        <h2>List of Visitors</h2>
+        <h2>Visitors</h2>
         <a class="btn btn-head" href="/HostelManagement/HomeEmployee.php" role="button">Home</a>
         <a class="btn btn-head" href="/HostelManagement/AddVisitor.php" role="button">Add Visitor</a>
 

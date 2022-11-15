@@ -29,27 +29,46 @@ $user_data = check_login($connection);
         font-family: sans-serif;
         background-size: cover;
     }
+
+    div1 {
+        color: #000000;
+        position: absolute;
+        left: 74%;
+        top: 13%;
+        transform: translate(-50%, -50%);
+        padding: 70px;
+        line-height: 70px;
+    }
+
+    div2 {
+        color: #000000;
+        position: absolute;
+        left: 82.4%;
+        top: 13%;
+        transform: translate(-50%, -50%);
+        padding: 70px;
+        line-height: 70px;
+    }
 </style>
 
 <body>
     <div class="container my-5">
         <h2>Students</h2>
         <form action="" method="GET">
-            <div class="row mb-2">
-                <div class="offset-sm-0 row mb-2 col-sm-2">
-                    <a class="btn btn-head" href="/HostelManagement/HomeEmployee.php" role="button">Home</a>
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class=" offset-sm-0 col-sm-2 d-grid">
-                    <button type="submit" class="btn btn-head">Search</button>
-                </div>
-                <div class=" offset-sm-0 col-sm-2 d-grid">
-                    <input type="text" class="form-control" name="StudentID" value="<?php if (isset($_GET['StudentID'])) {
-                                                                                        echo $_GET['StudentID'];
-                                                                                    } ?>">
-                </div>
-            </div>
+            <a class="btn btn-head" href="/HostelManagement/HomeEmployee.php" role="button">
+                <ion-icon name="home-sharp"></ion-icon>
+            </a>
+            <div1>
+                <button type="submit" class="btn btn-head">
+                    <ion-icon name="search"></ion-icon>Search
+                </button>
+            </div1>
+            <div2>
+                <input type="text" class="form-control" name="StudentID" value="<?php if (isset($_GET['StudentID'])) {
+                                                                                    echo $_GET['StudentID'];
+                                                                                } ?>">
+            </div2>
+
         </form>
         <form>
             <table class="styled-table">

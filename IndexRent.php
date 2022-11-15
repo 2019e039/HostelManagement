@@ -32,7 +32,7 @@ $user_data = check_login($connection);
 
 <body>
     <div class="container my-5">
-        <h2>List of Payments</h2>
+        <h2>Payments</h2>
         <form action="" method="GET">
             <div class="row mb-0">
                 <div class=" offset-sm-0 col-sm-2">

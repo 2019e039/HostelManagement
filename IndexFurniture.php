@@ -42,7 +42,7 @@ $user_data = check_login($connection);
 
 <body>
     <div class="container my-5">
-        <h2>List of Furnitures</h2>
+        <h2>Furnitures</h2>
         <a class="btn btn-head" href="./HomeEmployee.php" role="button">Home</a>
         <a class="btn btn-head" href="./AddFurniture.php" role="button">New furniture</a>
         <br>

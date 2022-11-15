@@ -54,7 +54,7 @@ $user_data = check_login($connection);
 
 <body>
     <div class="container my-5">
-        <h2>List of Employee</h2>
+        <h2>Employee</h2>
         <form action="" method="GET">
             <a class="btn btn-head" href="./index.php" role="button">
                 <ion-icon name="home-sharp"></ion-icon>
