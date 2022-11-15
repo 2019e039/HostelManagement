@@ -103,6 +103,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         font-family: sans-serif;
         background-size: cover;
     }
+
+    .box {
+        top: 37%;
+        left: 50%;
+    }
+
+    .box select {
+        background-color: #ffffff;
+        color: black;
+        padding: 8px;
+        width: 637px;
+        border: none;
+        font-size: 17px;
+        outline: none;
+        border-radius: 7px;
+    }
 </style>
 
 <body>
@@ -131,7 +147,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Room ID</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="RoomID" value="<?php echo $RoomID; ?>">
+                    <div class="box">
+                        <select name="RoomID">
+                            <option value="" disabled selected>Select Your Room ID</option>
+                            <?php
+                            $room = "SELECT * FROM room WHERE nPeople < 4";
+                            $result = $connection->query($room);
+                            while ($row = $result->fetch_assoc()) {
+                                echo "
+                        <option value=$row[RoomID]>$row[RoomID]</option>
+                ";
+                            }
+                            ?>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="row mb-3">
@@ -161,7 +190,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Department</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="Department" value="<?php echo $Department; ?>">
+                    <div class="box">
+                        <select name="Department">
+                            <option value="" disabled selected>Choose Department</option>
+                            <option value="Computer">Computer</option>
+                            <option value="Civil">Civil</option>
+                            <option value="EEE">EEE</option>
+                            <option value="Mechanical">Mechanical</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="row mb-3">
