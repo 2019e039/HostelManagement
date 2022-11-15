@@ -17,7 +17,7 @@ $successMessage = "";
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (!isset($_GET["EmployeeID"])) {
-        header("location: /HostelManagement/IndexEmployee.php");
+        header("location: ./IndexEmployee.php");
         exit;
     }
 
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $row = $result->fetch_assoc();
 
     if (!$row) {
-        header("location: /HostelManagement/IndexEmployee.php");
+        header("location: ./IndexEmployee.php");
         exit;
     }
 
