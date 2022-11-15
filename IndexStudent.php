@@ -61,7 +61,7 @@ $user_data = check_login($connection);
 
                         $ID = $_GET['StudentID'];
 
-                        $sql = "SELECT * FROM student WHERE StudentID='$ID' OR RoomID='$ID' OR Fname='$ID' OR Lname='$ID'";
+                        $sql = "SELECT * FROM student WHERE StudentID='$ID' OR RoomID='$ID' OR Fname='$ID' OR Lname='$ID' OR Department='$ID'";
                         $result = $connection->query($sql);
 
                         if (!$result) {
