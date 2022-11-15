@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		}
 
 		form {
-			border: 3px solid #008000;
+			border: 3px solid #63D471;
 			border-radius: 10px;
 		}
 
