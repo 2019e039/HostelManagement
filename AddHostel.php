@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <div class="container my-5">
-        <h2>New Room</h2>
+        <h2>New Hostel</h2>
 
         <?php
         if (!empty($errorMessage)) {
